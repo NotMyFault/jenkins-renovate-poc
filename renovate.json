@@ -1,7 +1,6 @@
 {
   "extends": [
     "config:base",
-    ":disableDependencyDashboard",
     ":semanticCommitsDisabled"
   ],
   "enabledManagers": [
@@ -37,6 +36,15 @@
       "fileMatch": ["war\/pom.xml"],
       "matchStrings": ["<node.version>(?<currentValue>.*?)<\/node.version>"],
       "depNameTemplate": "node",
+      "datasourceTemplate": "npm"
+    },
+    {
+      "fileMatch": ["war\/pom.xml"],
+      "matchStrings": [
+        "<yarn-berry.version>(?<currentValue>.*?)<\/yarn-berry.version>",
+        "<yarn-berry.sha256>(?<currentValue>.*?)<\/yarn-berry.sha256>"
+      ],
+      "depNameTemplate": "yarn",
       "datasourceTemplate": "npm"
     }
   ],
