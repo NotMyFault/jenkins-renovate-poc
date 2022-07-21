@@ -29,10 +29,6 @@
     {
       "matchPackageNames": ["node"],
       "allowedVersions": "/16.[0-9]+.[0-9]+(.[0-9]+)?$/"
-    },
-    {
-      "matchPackageNames": ["yarn"],
-      "enabled": false
     }
   ],
   "regexManagers": [
@@ -43,15 +39,8 @@
       "datasourceTemplate": "npm"
     },
     {
-      "fileMatch": [
-        "war\/pom.xml",
-        "war\/package.json"
-      ],
-      "matchStrings": [
-        "<yarn-berry.version>(?<currentValue>.*?)<\/yarn-berry.version>",
-        "<yarn-berry.sha256>(?<currentDigest>.*?)<\/yarn-berry.sha256>",
-        "yarn@(?<currentValue>.*?)$"
-      ],
+      "fileMatch": ["war\/pom.xml"],
+      "matchStrings": ["<yarn.version>(?<currentValue>.*?)<\/yarn.version>"],
       "depNameTemplate": "yarn",
       "datasourceTemplate": "npm"
     }
