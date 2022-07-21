@@ -4,7 +4,6 @@
     ":semanticCommitsDisabled"
   ],
   "enabledManagers": [
-    "npm",
     "regex"
   ],
   "packageRules": [
