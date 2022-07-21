@@ -39,9 +39,16 @@
       "datasourceTemplate": "npm"
     },
     {
-      "fileMatch": ["war\/pom.xml"],
-      "matchStrings": ["<yarn.version>(?<currentValue>.*?)<\/yarn.version>"],
-      "depNameTemplate": "yarn",
+      "fileMatch": [
+        "war\/pom.xml",
+        "war\/package.json"
+      ],
+      "matchStrings": [
+        "<yarn-berry.version>(?<currentValue>.*?)<\/yarn-berry.version>",
+        "<yarn-berry.sha256>(?<currentDigest>.*?)<\/yarn-berry.sha256>",
+        "yarn@(?<currentValue>.*?)$"
+      ],
+      "depNameTemplate": "berry",
       "datasourceTemplate": "npm"
     }
   ],
