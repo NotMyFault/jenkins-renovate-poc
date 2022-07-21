@@ -42,7 +42,7 @@
       "fileMatch": ["war\/pom.xml"],
       "matchStrings": [
         "<yarn-berry.version>(?<currentValue>.*?)<\/yarn-berry.version>",
-        "<yarn-berry.sha256>(?<currentValue>.*?)<\/yarn-berry.sha256>"
+        "<yarn-berry.sha256>(?<currentDigest>.*?)<\/yarn-berry.sha256>"
       ],
       "depNameTemplate": "yarn",
       "datasourceTemplate": "npm"
