@@ -44,7 +44,7 @@
       "matchStrings": [
         "<yarn-berry.version>(?<currentValue>.*?)<\/yarn-berry.version>"
       ],
-      "depNameTemplate": "yarn",
+      "depName": "yarnpkg/berry",
       "datasourceTemplate": "npm"
     }
   ],
